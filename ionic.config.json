@@ -1,0 +1,7 @@
+{
+  "name": "autoMovilApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
