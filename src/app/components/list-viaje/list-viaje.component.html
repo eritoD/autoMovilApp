@@ -1,5 +1,5 @@
 <ion-list>
-  <ion-item *ngFor="let car of cars">
+  <ion-item *ngFor="let car of cars" ion-button [routerLink]="['/info-viaje']">
     <ion-card>
       <ion-card-header>
         <ion-card-subtitle>Telefono: {{car.telefono}}</ion-card-subtitle>
