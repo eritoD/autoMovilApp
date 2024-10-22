@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { authGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,6 +11,25 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
+    canActivate:[authGuard]
+  },
+  {
+    path: 'form-conductor',
+    loadChildren: () => import('./form-conductor/form-conductor.module').then( m => m.FormConductorPageModule),
+    canActivate:[authGuard]
+  },
+  {
+    path: 'list-viajes',
+    loadChildren: () => import('./list-viajes/list-viajes.module').then( m => m.ListViajesPageModule),
+    canActivate:[authGuard]
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
 ];
 

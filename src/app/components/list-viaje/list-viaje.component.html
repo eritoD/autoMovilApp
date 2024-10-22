@@ -1,0 +1,14 @@
+<ion-list>
+  <ion-item *ngFor="let car of cars">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Telefono: {{car.telefono}}</ion-card-subtitle>
+        <ion-card-subtitle>Costo: {{car.tarifa}}</ion-card-subtitle>
+        <ion-card-subtitle>Capacidad: {{car.capacidad}}</ion-card-subtitle>
+        <ion-card-subtitle>Destino: {{car.destino}}</ion-card-subtitle>
+        <ion-card-subtitle>Patente: {{car.patente}}</ion-card-subtitle>
+        <ion-card-title>Modelo: {{car.nombre}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-item>
+</ion-list>
