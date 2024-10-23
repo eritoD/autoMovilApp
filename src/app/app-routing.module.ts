@@ -36,6 +36,11 @@ const routes: Routes = [
     loadChildren: () => import('./info-viaje/info-viaje.module').then( m => m.InfoViajePageModule),
     canActivate:[authGuard]
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule),
+    canActivate:[authGuard]
+  },
 ];
 
 @NgModule({
