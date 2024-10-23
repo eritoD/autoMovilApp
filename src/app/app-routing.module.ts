@@ -33,7 +33,8 @@ const routes: Routes = [
   },
   {
     path: 'info-viaje',
-    loadChildren: () => import('./info-viaje/info-viaje.module').then( m => m.InfoViajePageModule)
+    loadChildren: () => import('./info-viaje/info-viaje.module').then( m => m.InfoViajePageModule),
+    canActivate:[authGuard]
   },
 ];
 

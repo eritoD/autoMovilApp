@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { InfoViajePageRoutingModule } from './info-viaje-routing.module';
-
 import { InfoViajePage } from './info-viaje.page';
+import { ViajeInfoComponent } from '../components/viaje-info/viaje-info.component';
 
 @NgModule({
   imports: [
@@ -15,6 +13,6 @@ import { InfoViajePage } from './info-viaje.page';
     IonicModule,
     InfoViajePageRoutingModule
   ],
-  declarations: [InfoViajePage]
+  declarations: [InfoViajePage, ViajeInfoComponent]
 })
 export class InfoViajePageModule {}
