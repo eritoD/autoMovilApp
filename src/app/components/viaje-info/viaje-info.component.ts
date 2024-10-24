@@ -10,10 +10,5 @@ export class ViajeInfoComponent  implements OnInit {
   cars:Car[]=[]
   constructor(private carsService:CarsService) { }
 
-  ngOnInit() {
-    this.carsService.getCar().subscribe(cars =>{
-      this.cars = cars;
-    })
-  }
-
+  ngOnInit() {}
 }
