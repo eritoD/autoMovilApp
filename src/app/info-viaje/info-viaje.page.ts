@@ -1,16 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { OpenWeatherService } from 'src/app/services/openweather.service';
+
 
 @Component({
   selector: 'app-info-viaje',
   templateUrl: './info-viaje.page.html',
   styleUrls: ['./info-viaje.page.scss'],
 })
+
+
+
 export class InfoViajePage implements OnInit {
   private animation!:Animation;
-  constructor(private aCtrl:AnimationController) { }
+  clima: any;
+ 
+  private readonly LATITUD = -33.4489;
+  private readonly LONGITUD = -70.6693;
 
+  constructor(private aCtrl:AnimationController,private openWeatherService: OpenWeatherService) {
+    
+   }
+   
   ngOnInit() {
+    this.getWeather(this.LATITUD, this.LONGITUD);
+  }
+
+  getWeather(lat: number, lon: number) {
+    this.openWeatherService.getWeather(lat, lon).subscribe(
+      (data) => {
+        this.clima = data;
+      },
+      (error) => {
+        console.error('Error al obtener los datos del clima:', error);
+      }
+    );
   }
 
   ngAfterViewInit(){this.animation = this.aCtrl.create()
@@ -22,6 +47,8 @@ export class InfoViajePage implements OnInit {
       { offset: 0.5, transform: 'translateX(300px) rotate(180deg)', opacity: '1' },
       { offset: 0.8, transform: 'translateX(600px) rotate(360deg)', opacity: '0.5 ' }
     ]);
+
+    
     
     this.animation.play();
   }
