@@ -1,4 +1,4 @@
-// src/app/services/openweather.service.ts
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class OpenWeatherService {
-  private apiKey = '996d3d52059113c5053d4d9ae93949a8'; // Reemplaza con tu API Key de OpenWeather
+  private apiKey = '996d3d52059113c5053d4d9ae93949a8'; 
   private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
   constructor(private http: HttpClient) {}
