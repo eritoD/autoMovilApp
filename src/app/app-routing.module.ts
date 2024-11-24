@@ -38,9 +38,14 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule),
-    canActivate: [authGuard]
-  }
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule),
+    canActivate:[authGuard]
+  },
+  {
+    path: 'registro-car',
+    loadChildren: () => import('./registro-car/registro-car.module').then( m => m.RegistroCarPageModule)
+  },
+
 ];
 
 @NgModule({
