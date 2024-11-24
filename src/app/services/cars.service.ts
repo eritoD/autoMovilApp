@@ -27,4 +27,12 @@ export class CarsService {
   getCar():Observable<Car[]>{
     return this.firestore.collection<Car>(this.collectionName).valueChanges();
   }
+
+  getCarById(id: string): Observable<Car | undefined> {
+    return this.firestore
+      .collection<Car>(this.collectionName)
+      .doc(id)
+      .valueChanges();
+  }
+  
 }

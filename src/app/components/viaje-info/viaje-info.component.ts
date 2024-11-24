@@ -1,14 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { CarsService, Car } from '../../services/cars.service';
+import { CarsService, Car } from './../../services/cars.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-viaje-info',
   templateUrl: './viaje-info.component.html',
   styleUrls: ['./viaje-info.component.scss'],
 })
-export class ViajeInfoComponent  implements OnInit {
-  cars:Car[]=[]
-  constructor(private carsService:CarsService) { }
+export class ViajeInfoComponent implements OnInit {
+  car$: Observable<Car | undefined>;
 
-  ngOnInit() {}
+  constructor(
+    private route: ActivatedRoute,
+    private carsService: CarsService
+  ) {}
+
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.car$ = this.carsService.getCarById(id);
+    }
+  }
 }

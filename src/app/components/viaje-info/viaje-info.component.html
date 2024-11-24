@@ -1,7 +1,14 @@
-<ion-item *ngFor="let car of cars">
-    <ion-card>
-    <ion-card-header>
-        <ion-card-title>{{car.nombre}}</ion-card-title>
-    </ion-card-header>
-    </ion-card>
-</ion-item>
+<ion-content fullscreen="true">
+    <div *ngIf="car$ | async as car; else loading">
+      <h2>{{ car.nombre }}</h2>
+      <p>{{ car.patente }}</p>
+      <p>{{ car.destino }}</p>
+      <p>Capacidad: {{ car.capacidad }}</p>
+      <p>Tarifa: ${{ car.tarifa }}</p>
+      <p>Teléfono: {{ car.telefono }}</p>
+    </div>
+  
+    <ng-template #loading>
+      <ion-spinner name="dots"></ion-spinner> Cargando...
+    </ng-template>
+  </ion-content>

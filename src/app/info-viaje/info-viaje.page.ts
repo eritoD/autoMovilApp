@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
-import { Router } from '@angular/router';
 import { OpenWeatherService } from 'src/app/services/openweather.service';
 
 

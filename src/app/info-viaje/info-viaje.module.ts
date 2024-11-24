@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { InfoViajePageRoutingModule } from './info-viaje-routing.module';
+import { InfoViajePageRoutingModule } from './info-viaje-routing.module'; // Aquí debes importar correctamente
 import { InfoViajePage } from './info-viaje.page';
 import { ViajeInfoComponent } from '../components/viaje-info/viaje-info.component';
 
@@ -11,7 +11,7 @@ import { ViajeInfoComponent } from '../components/viaje-info/viaje-info.componen
     CommonModule,
     FormsModule,
     IonicModule,
-    InfoViajePageRoutingModule
+    InfoViajePageRoutingModule // Debe ser el módulo de rutas
   ],
   declarations: [InfoViajePage, ViajeInfoComponent]
 })
