@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AutoService } from './vehiculo.service';
+import { AutoService } from './auto.service';
 
 describe('AutoService', () => {
   let service: AutoService;

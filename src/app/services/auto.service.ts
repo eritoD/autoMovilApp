@@ -13,15 +13,15 @@ export interface Aut{
   providedIn: 'root'
 })
 export class AutoService {
-  private collectionName="cars";
+  private collectionName="autos";
   constructor(private firestore:AngularFirestore) { }
 
-  addCar(aut:Aut): Promise<void> {
+  addAut(aut:Aut): Promise<void> {
     const id = this.firestore.createId();
     return this.firestore.collection(this.collectionName).doc(id).set({...aut,id})
   }
 
-  getCar():Observable<Aut[]>{
+  getAut():Observable<Aut[]>{
     return this.firestore.collection<Aut>(this.collectionName).valueChanges();
   }
 
