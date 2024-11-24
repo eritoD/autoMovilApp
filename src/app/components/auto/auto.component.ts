@@ -17,7 +17,7 @@ export class AutoComponent  implements OnInit {
 
   ngOnInit() {}
 
-  addAuto(){
+  addAut(){
     this.autService.addAut(this.aut).then(()=>{
       alert("Viaje agregado exitosamente!")
       this.aut= {nombre:"",patente:""};
