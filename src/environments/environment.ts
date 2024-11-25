@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyA1VziinqonyjnGiBcE6CuZVLEO-WbnO4U",
-    authDomain: "automovilapp-421d2.firebaseapp.com",
-    projectId: "automovilapp-421d2",
-    storageBucket: "automovilapp-421d2.appspot.com",
-    messagingSenderId: "914402650129",
-    appId: "1:914402650129:web:631cc4a4dbf8b74acda9b0"
+    apiKey: "AIzaSyAv4h34ZrlEVTUtCE9P0fZ-xAeoaWJk8sA",
+  authDomain: "sqlzo-56b50.firebaseapp.com",
+  projectId: "sqlzo-56b50",
+  storageBucket: "sqlzo-56b50.firebasestorage.app",
+  messagingSenderId: "1035245003040",
+  appId: "1:1035245003040:web:a57c59bde1e41772d5b745"
   }
 };
 

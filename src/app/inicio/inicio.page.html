@@ -12,7 +12,8 @@
       <h1>¿Que deseas hacer hoy?</h1>
       <div class="btnD">
         <button ion-button [routerLink]="['/list-viajes']" class="btn">Pasajero</button>
-        <button ion-button [routerLink]="['/form-conductor']" class="btn">Conductor</button><br>
+        <!-- aca condiciono -->
+        <button (click)="validar()" class="btn">Conductor</button><br>
         <button class="btn" (click)="logout()" class="btn">Cerrar Sesión</button>
       </div><br>
     </div>

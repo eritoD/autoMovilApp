@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './../services/auth.service';
 import { Animation, AnimationController } from '@ionic/angular';
+import { DataService } from '../data.service';
+import { firstValueFrom } from 'rxjs';
+import { Car, CarsService } from '../services/cars.service';
 
 @Component({
   selector: 'app-inicio',
@@ -10,9 +13,39 @@ import { Animation, AnimationController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
   private animation!:Animation;
-  constructor(private aService:AuthService, private router:Router, private aCtrl:AnimationController) { }
+  email: string = '';
+  constructor(private aService:AuthService
+              , private router:Router
+              , private aCtrl:AnimationController
+              , private dataService: DataService
+              , private carService:CarsService) { }
 
   ngOnInit() {
+  }
+
+  async validar(){
+    try {
+      this.email = this.dataService.getEmail(); // Recupera el correo del servicio
+      console.log("Correo para validar:", this.email);
+  
+      // Convertir el observable en una promesa
+      const cars = await firstValueFrom(this.carService.getCar());
+  
+      // Verificar si existe un coche con el nombre igual al correo
+      const carExists = cars.some(car => car.nombre === this.email);
+  
+      if (carExists) {
+        console.log("El usuario ya está registrado en el sistema.");
+        alert("Este usuario ya está registrado en el sistema.");
+        this.router.navigate(["/form-conductor"]);
+      } else {
+        console.log("El usuario no está registrado en el sistema.");
+        alert("El usuario no está registrado en el sistema.");
+        this.router.navigate(["/registro-car"]);
+      }
+    } catch (error) {
+      console.error("Error al obtener la lista de coches:", error);
+    }
   }
 
   logout(){
