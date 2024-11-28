@@ -46,10 +46,10 @@ export class AutoComponent  implements OnInit {
 
     this.carService.crea(this.car).then(()=>{
       console.log("bien")
-      alert("Viaje agregado exitosamente!")
+      alert("Vehiculo agregado exitosamente!")
       this.car= {nombre:this.email,modelo:"",patente:"",destino:"",capacidad:0,tarifa:0,telefono:0}
       this.router.navigate(["/inicio"]);
-  }).catch(error=>{alert("Error al momento de registrar destino!"+error)})
+  }).catch(error=>{alert("Error al momento de registrar vehiculo!"+error)})
 }
 
   irANuevaPagina() {
