@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CarsService, Car } from '../../services/cars.service';
 
 @Component({
-  selector: 'app-list-viaje',
-  templateUrl: './list-viaje.component.html',
-  styleUrls: ['./list-viaje.component.scss'],
+    selector: 'app-list-viaje',
+    templateUrl: './list-viaje.component.html',
+    styleUrls: ['./list-viaje.component.scss'],
+    standalone: false
 })
 export class ListViajeComponent  implements OnInit {
   cars:Car[]=[]

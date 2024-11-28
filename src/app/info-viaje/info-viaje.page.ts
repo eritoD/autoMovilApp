@@ -4,9 +4,10 @@ import { OpenWeatherService } from 'src/app/services/openweather.service';
 
 
 @Component({
-  selector: 'app-info-viaje',
-  templateUrl: './info-viaje.page.html',
-  styleUrls: ['./info-viaje.page.scss'],
+    selector: 'app-info-viaje',
+    templateUrl: './info-viaje.page.html',
+    styleUrls: ['./info-viaje.page.scss'],
+    standalone: false
 })
 
 

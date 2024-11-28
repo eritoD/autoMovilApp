@@ -6,9 +6,10 @@ import { AuthService } from '../../services/auth.service';
 
 
 @Component({
-  selector: 'app-perfil-usuario',
-  templateUrl: './perfil-usuario.component.html',
-  styleUrls: ['./perfil-usuario.component.scss'],
+    selector: 'app-perfil-usuario',
+    templateUrl: './perfil-usuario.component.html',
+    styleUrls: ['./perfil-usuario.component.scss'],
+    standalone: false
 })
 export class PerfilUsuarioComponent  implements OnInit {
   car$: Observable<Car | undefined>;

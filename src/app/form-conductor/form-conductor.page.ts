@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-form-conductor',
-  templateUrl: './form-conductor.page.html',
-  styleUrls: ['./form-conductor.page.scss'],
+    selector: 'app-form-conductor',
+    templateUrl: './form-conductor.page.html',
+    styleUrls: ['./form-conductor.page.scss'],
+    standalone: false
 })
 export class FormConductorPage implements OnInit {
   private animation!:Animation;

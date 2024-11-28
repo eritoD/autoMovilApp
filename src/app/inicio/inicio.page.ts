@@ -7,9 +7,10 @@ import { firstValueFrom } from 'rxjs';
 import { Car, CarsService } from '../services/cars.service';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.page.html',
-  styleUrls: ['./inicio.page.scss'],
+    selector: 'app-inicio',
+    templateUrl: './inicio.page.html',
+    styleUrls: ['./inicio.page.scss'],
+    standalone: false
 })
 export class InicioPage implements OnInit {
   private animation!:Animation;

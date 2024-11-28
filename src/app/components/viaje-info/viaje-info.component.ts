@@ -4,9 +4,10 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-viaje-info',
-  templateUrl: './viaje-info.component.html',
-  styleUrls: ['./viaje-info.component.scss'],
+    selector: 'app-viaje-info',
+    templateUrl: './viaje-info.component.html',
+    styleUrls: ['./viaje-info.component.scss'],
+    standalone: false
 })
 export class ViajeInfoComponent implements OnInit {
   car$: Observable<Car | undefined>;

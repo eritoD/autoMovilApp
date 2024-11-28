@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { DataService } from '../../data.service';
 
 @Component({
-  selector: 'app-cars',
-  templateUrl: './cars.component.html',
-  styleUrls: ['./cars.component.scss'],
+    selector: 'app-cars',
+    templateUrl: './cars.component.html',
+    styleUrls: ['./cars.component.scss'],
+    standalone: false
 })
 export class CarsComponent  implements OnInit {
   car:Car = {

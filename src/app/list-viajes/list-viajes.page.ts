@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-list-viajes',
-  templateUrl: './list-viajes.page.html',
-  styleUrls: ['./list-viajes.page.scss'],
+    selector: 'app-list-viajes',
+    templateUrl: './list-viajes.page.html',
+    styleUrls: ['./list-viajes.page.scss'],
+    standalone: false
 })
 export class ListViajesPage implements OnInit {
   private animation!:Animation;
